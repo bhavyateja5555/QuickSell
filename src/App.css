@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+* {
+  font-size: 12px; /* Reduce font size for all elements */
+}
+.app {
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.controls {
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display-dropdown {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-menu {
+  display: block;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 0.5rem;
+  position: absolute;
+}
+
+.kanban-board {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 100px;
+}
+
+.kanban-column {
+  width: 30%;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.kanban-ticket {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-code {
+  font-weight: bold;
+}
+
+.priority-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.kanban-board .add{
+  margin-left: 150px;
+}
+.feature-tag {
+  display: flex;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  gap: 4px;
+  margin-right: 130px;
+  padding: 7px; /* Added padding inside the feature tag */
+}
+.circle-box{
+  border-radius: 50%;
+  border: 2px solid white;
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+}
+h3 span{
+  margin-left: 8px;
+}
+.controls > div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: fit-content;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-dropdown {
+  position: relative;
+  margin-left: 10px;
+  padding: 0; /* Remove padding to avoid unwanted space */
+  border: none; /* Remove the border */
+  background-color: transparent; /* Make background transparent */
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust as necessary */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 10px; /* Space inside the dropdown */
+}
+
+.grouping, .ordering {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between label and dropdown */
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.d1 {
+  padding-left: 7px;
 }
